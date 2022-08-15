@@ -1,8 +1,8 @@
-#ifndef DEASSEMBLER_FILESIZE_H
-#define DEASSEMBLER_FILESIZE_H
+#ifndef DISASSEMBLER_FILESIZE_H
+#define DISASSEMBLER_FILESIZE_H
 #include <stdio.h>
 
 int findFileSize(char filename[]);
-FILE *fp;
+FILE *chkExist;
 long int res;
-#endif //DEASSEMBLER_FILESIZE_H
+#endif //DISASSEMBLER_FILESIZE_H

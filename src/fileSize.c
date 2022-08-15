@@ -2,19 +2,19 @@
 #include <stdio.h>
 
 int findFileSize(char filename[]) {
-    FILE* fp = fopen("octoachip8story.ch8", "r");
-    if (fp == NULL) {
+    chkExist = fopen(filename, "r");
+    if (chkExist == NULL) {
         printf("File Not Found!\n");
         return -1;
     }
 
-    fseek(fp, 0L, SEEK_END);
+    fseek(chkExist, 0L, SEEK_END);
 
     // calculating the size of the file
-    long int res = ftell(fp);
+    res = ftell(chkExist);
 
     // closing the file
-    fclose(fp);
+    fclose(chkExist);
 
     return res;
 }

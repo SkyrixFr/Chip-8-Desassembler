@@ -9,8 +9,8 @@ void disassembleRomChip8(uint8_t *codebuffer) {
 
 int main(int argc, char** argv) {
     FILE *fp = fopen(argv[1], "rb");
-/*    long filesize = findFileSize(argv[1]);
-    printf("%d", filesize);*/
+    long filesize = findFileSize(argv[1]);
+    printf("%ld", filesize);
 
     return 0;
 }
