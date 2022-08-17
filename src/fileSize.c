@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int findFileSize(char filename[]) {
-    chkExist = fopen(filename, "r");
+    FILE *chkExist = fopen(filename, "r");
     if (chkExist == NULL) {
         printf("File Not Found!\n");
         return -1;

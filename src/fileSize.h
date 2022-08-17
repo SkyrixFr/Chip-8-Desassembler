@@ -3,6 +3,6 @@
 #include <stdio.h>
 
 int findFileSize(char filename[]);
-FILE *chkExist;
-long int res;
+extern FILE *chkExist;
+extern long int res;
 #endif //DISASSEMBLER_FILESIZE_H
