@@ -53,9 +53,21 @@ void disassembleRomChip8(uint8_t *codebuffer, int programCounter) {
             printf("%-10s #$%01x%02x", "CALL", secondnib, code[1]);
         }
         break;
-        case 0x03: printf("3 not done"); break;
-        case 0x04: printf("4 not done"); break;
-        case 0x05: printf("5 not done"); break;
+        case 0x03:
+        {
+            printf("%-10s V%01x,0x%02x", "CMP", secondnib, code[1]);
+        }
+        break;
+        case 0x04:
+        {
+            printf("%-10s V%01x,0x%02x", "CMPN", secondnib, code[1]);
+        }
+        break;
+        case 0x05:
+        {
+            printf("%-10s V%01x,V%01x", "CMP", secondnib, thirdnib);
+        }
+        break;
         case 0x06:
         {
             printf("%-10s V%01X,0x%02x", "SET", secondnib, code[1]);
@@ -70,7 +82,7 @@ void disassembleRomChip8(uint8_t *codebuffer, int programCounter) {
         case 0x09: printf("9 not done"); break;
         case 0x0a:
         {
-            printf("%-10s I,%01x%02x", "SET", secondnib, code[1]);
+            printf("%-10s I,0x0%01x%02x", "SET", secondnib, code[1]);
         }
         break;
         case 0x0b: printf("b not handled yet"); break;
