@@ -1,5 +1,2 @@
-.gitattributes
-.idea
-dessasembler.exe
-src/*.o
-build
+obj/
+bin/

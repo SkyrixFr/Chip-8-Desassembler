@@ -5,4 +5,5 @@
 int findFileSize(char filename[]);
 extern FILE *chkExist;
 extern long int res;
+
 #endif //DISASSEMBLER_FILESIZE_H

@@ -11,7 +11,7 @@ int findFileSize(char filename[]) {
     fseek(chkExist, 0L, SEEK_END);
 
     // calculating the size of the file
-    res = ftell(chkExist);
+    long int res = ftell(chkExist);
 
     // closing the file
     fclose(chkExist);
