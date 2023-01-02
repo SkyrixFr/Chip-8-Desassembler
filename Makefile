@@ -19,7 +19,6 @@ program : $(OBJ)
 	$(CXX) $(CXXFLAGS) -I $(HEADERS_LOCALISATION) -c $< -o obj\$@
 
 clean:
-	rm -r -f obj bin
-	mkdir obj bin
+	del obj\*.o bin\*.exe
 
 .PHONY: all program clean
